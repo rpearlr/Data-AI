@@ -1,0 +1,16 @@
+list=[1,2,3,4,12,543,1,2,2]
+list.append(400)
+print(list)
+list.insert(2,21)
+print(list)
+list.remove(12)
+print(list)
+list.pop()
+print(list)
+list.sort()
+print(list)
+print(list[0])
+print(list[2:4])
+print(list[-4:-2])
+for index,val in enumerate(list):
+  print(f"{index} : {val}")

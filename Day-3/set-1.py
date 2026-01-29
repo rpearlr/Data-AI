@@ -1,0 +1,14 @@
+set1={1,2,4,5,6,7,8,9,10,11,12}
+set2={2,4,6,8}
+print(set1)
+print(set2)
+set2.add(10)
+print(set2)
+set2.remove(2)
+print(set2)
+list1=[1,1,1,1,2,2,3,3,4,5]
+set3=set(list1)
+print(set3)
+print(set1.union(set2))
+print(set1.intersection(set2))
+print(set1.difference(set2))
