@@ -1,0 +1,17 @@
+create 3 crud operation
+similar like make my trip
+1)bus
+3)hotel
+
+check request in postman in 3 collections bus,flight,hotel
+with 4 request get,post ,put and delete and it should response there
+data in postman
+
+
+get localhost:8000/bus -buses
+get localhost:8000/bus/busname -individual bus name details
+get localhost:8000/bus/search?busname
+post localhost:8000/bus/busname/seat
+put localhost:8000/bus/busname/seat/-change seat number
+get localhost:8000/bus/busname/seat/ -booking confirmed
+
