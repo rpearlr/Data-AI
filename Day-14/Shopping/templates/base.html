@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Mini Shop</title>
+
+<style>
+:root {
+    --primary: #40739e;
+    --dark: #2f3640;
+    --light: #f5f6fa;
+    --danger: #c23616;
+    --success: #44bd32;
+}
+
+/* Reset */
+* {
+    box-sizing: border-box;
+}
+
+/* Body */
+body {
+    margin: 0;
+    font-family: "Segoe UI", Tahoma, sans-serif;
+    background: #eef1f5;
+    color: #2f3640;
+}
+
+/* Navbar */
+nav {
+    background: var(--dark);
+    padding: 14px 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav .logo {
+    color: white;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+nav a {
+    color: white;
+    margin-left: 20px;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+nav a:hover {
+    opacity: 0.85;
+}
+
+/* Container */
+.container {
+    max-width: 1100px;
+    margin: 40px auto;
+    background: white;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+}
+
+/* Headings */
+h1, h2 {
+    margin-top: 0;
+}
+
+/* Inputs */
+input {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 12px;
+    border-radius: 6px;
+    border: 1px solid #dcdde1;
+    font-size: 15px;
+}
+
+input:focus {
+    outline: none;
+    border-color: var(--primary);
+}
+
+/* Buttons */
+.btn {
+    display: inline-block;
+    padding: 10px 18px;
+    border-radius: 6px;
+    background: var(--primary);
+    color: white;
+    border: none;
+    cursor: pointer;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+.btn:hover {
+    background: #273c75;
+}
+
+.btn.success {
+    background: var(--success);
+}
+
+.btn.danger {
+    background: var(--danger);
+}
+
+/* Grid */
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+/* Cards */
+.card {
+    background: white;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+    transition: transform 0.2s ease;
+}
+
+.card:hover {
+    transform: translateY(-4px);
+}
+
+.card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.card-body {
+    padding: 15px;
+}
+
+/* Table */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+th {
+    background: #f1f2f6;
+    text-align: left;
+    padding: 12px;
+}
+
+td {
+    padding: 12px;
+    border-bottom: 1px solid #eee;
+}
+
+/* Center */
+.center {
+    text-align: center;
+}
+</style>
+</head>
+
+<body>
+
+<nav>
+    <div class="logo">🛒 Mini Shop</div>
+    <div>
+        <a href="{{ url_for('products') }}">Products</a>
+        <a href="{{ url_for('cart') }}">Cart</a>
+        <a href="{{ url_for('logout') }}">Logout</a>
+    </div>
+</nav>
+
+<div class="container">
+    {% block content %}{% endblock %}
+</div>
+
+</body>
+</html>

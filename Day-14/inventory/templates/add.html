@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Add Product</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #eef2f5;
+            padding: 30px;
+        }
+
+        .container {
+            max-width: 400px;
+            margin: auto;
+            background: white;
+            padding: 25px;
+            border-radius: 8px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+        }
+
+        h1 {
+            text-align: center;
+            margin-bottom: 20px;
+            color: #2c3e50;
+        }
+
+        input, select {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+        }
+
+        button {
+            width: 100%;
+            padding: 10px;
+            background: #007bff;
+            color: white;
+            border: none;
+            border-radius: 6px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background: #0056b3;
+        }
+    </style>
+</head>
+
+<body>
+<div class="container">
+
+    <h1>Add Product</h1>
+
+    <form method="post" action="/add">
+        <select name="category">
+            <option value="electronics">Electronics</option>
+            <option value="grocery">Grocery</option>
+        </select>
+
+        <input name="name" placeholder="Product Name">
+        <input type="number" name="price" placeholder="Price">
+        <input type="number" name="stock" placeholder="Stock">
+
+        <button type="submit">Add Product</button>
+    </form>
+
+</div>
+</body>
+</html>

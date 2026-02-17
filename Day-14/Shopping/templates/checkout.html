@@ -1,0 +1,18 @@
+{% extends "base.html" %}
+{% block content %}
+
+<div style="
+    text-align:center;
+    padding:60px;
+">
+    <h1>✅ You have checked out</h1>
+    <p>Thank you for shopping with us.</p>
+
+    <br>
+
+    <a href="{{ url_for('products') }}" class="btn success">
+        Go back to Products
+    </a>
+</div>
+
+{% endblock %}

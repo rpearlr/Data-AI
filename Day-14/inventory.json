@@ -1,0 +1,34 @@
+{
+    "electronics": {
+        "Laptop": {
+            "price": 65000,
+            "stock": 10
+        },
+        "Smartphone": {
+            "price": 30000,
+            "stock": 25
+        },
+        "Headphones": {
+            "price": 2500,
+            "stock": 50
+        },
+        "PC": {
+            "price": 1000000,
+            "stock": 4
+        }
+    },
+    "grocery": {
+        "Rice": {
+            "price": 60,
+            "stock": 7
+        },
+        "Milk": {
+            "price": 45,
+            "stock": 40
+        },
+        "Sugar": {
+            "price": 42,
+            "stock": 80
+        }
+    }
+}

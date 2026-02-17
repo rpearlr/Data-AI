@@ -1,0 +1,35 @@
+{% extends "base.html" %}
+{% block content %}
+
+<h2>Products</h2>
+
+<form method="GET" style="display:flex; gap:10px; margin-bottom:20px;">
+    <input name="search" placeholder="Search product">
+    <input name="price" placeholder="Max price">
+    <button class="btn">Filter</button>
+</form>
+
+<div class="grid">
+{% for p in products %}
+    <div class="card">
+        <img src="{{ url_for('static', filename='uploads/' + p.image) }}">
+        <div class="card-body">
+            <h3>{{ p.name }}</h3>
+            <p>₹ {{ p.price }}</p>
+
+            <a href="/add-cart/{{ p.name }}" class="btn">Add to Cart</a>
+
+            {% if current_user.is_admin %}
+            <a href="/delete-product/{{ p.name }}" class="btn danger">Delete</a>
+            {% endif %}
+        </div>
+    </div>
+{% endfor %}
+</div>
+
+{% if current_user.is_admin %}
+<br>
+<a href="/add-product" class="btn success">+ Add Product</a>
+{% endif %}
+
+{% endblock %}

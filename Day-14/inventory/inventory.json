@@ -1,0 +1,18 @@
+{
+    "electronics": {
+        "Phone": {
+            "price": 33456,
+            "stock": 12
+        },
+        "Laptop": {
+            "price": 500,
+            "stock": 6
+        }
+    },
+    "grocery": {
+        "apple": {
+            "price": 40,
+            "stock": 6
+        }
+    }
+}
